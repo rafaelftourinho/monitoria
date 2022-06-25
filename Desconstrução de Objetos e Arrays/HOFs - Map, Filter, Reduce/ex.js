@@ -155,7 +155,7 @@ for (let i in array) {
 console.log('Sem HOF (usando for-in):',somatorio);
 }
 
-// EXEMPLO 2
+// EXEMPLO 2 - utilização do reduce com novos parâmetros
 
 {
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
@@ -176,7 +176,7 @@ const comparacaoNumeros = (gabarito, resposta) => {
 console.log(verificacaoNota(RIGHT_ANSWERS, STUDENT_ANSWERS, comparacaoNumeros));
 }
 
-// EXEMPLO 3
+// EXEMPLO 3 - construíndo um objeto com reduce
 
 {
 const pessoal = [

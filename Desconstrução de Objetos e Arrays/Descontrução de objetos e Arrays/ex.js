@@ -1,5 +1,5 @@
 // DESCONSTRUÇÃO DE OBJETOS
-
+{
 const menuzinho = {
   food: {
     sopa: 9.9,
@@ -31,10 +31,11 @@ function pegaValorDosDrinks({ drink: { agua } }) {
 }
 
 console.log(pegaValorDosDrinks(menuzinho));
-
+}
 
 // DESCONSTRUÇÃO DE ARRAYS
 
+{
 const info = ['Rafael', 'França', 32, 'Licenciatura em Química'];
 
 const [ nome, sobrenome, idade, formacao ] = info;
@@ -61,3 +62,4 @@ const criar = () => ['Wan','Pedro','Lontra'];
 const [aa, bb, cc] = criar();
 
 console.log(aa,bb,cc);
+}
