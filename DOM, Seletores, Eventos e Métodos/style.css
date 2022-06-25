@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-color: rgb(50, 167, 145);
+  --btn-color: rgb(39, 39, 146);
+  --form-color: rgb(221, 220, 220);
+  --star-color: rgb(0, 76, 255);
+  --btn-submit-color: rgb(39, 39, 146);
+}
+
+body {
+  background-image: url('./imgs/game_destaque2.webp') ;
+  background-size: cover ;
+}
+
+
+.header {
+  display: flex;
+  background-color: var(--header-color);
+  width: 100%;
+  padding: 20px;
+}
+
+header .container-header , .container-h1 {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.container-h1 {
+  justify-content: center;
+  flex: 2;
+}
+
+header h1 {
+  align-self: center;
+  color: white;
+  font-size: 50px;
+}
+
+header div img {
+  width: 80px;
+}
+
+.trybewarts-login {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.trybewarts-login input {
+  width: 40%;
+  height: 40%;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.trybewarts-login button {
+  height: 40%;
+  width: 20%;
+  background-color: var(--btn-color);
+  color: white;
+  opacity: 0.8;
+}
+
+.trybewarts-login button:hover {
+  opacity: 1;
+}
+
+#evaluation-form , main {
+  display: flex;
+}
+
+main {
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.container-input {
+  display: flex;
+}
+
+.container-input input {
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+}
+
+#evaluation-form , #form-data {
+  flex-direction: column;
+  width: 675px;
+  background-color: var(--form-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
+}
+
+#container-select {
+  display: flex;
+}
+
+#input-email {
+  padding: 10px;
+  margin: 0 10px;
+  flex: 2;
+}
+
+#container-select label {
+  align-self: center;
+}
+
+#container-select select {
+  margin: 0 10px 0 5px;
+}
+
+#label-family , #house-label {
+  font-weight: 700;
+}
+
+.container-radio {
+  display: flex;
+  /* flex-flow: column; */
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+#label-content {
+  margin: 10px;
+}
+
+.container-checkbox , .validation input , .container-radio2 {
+  margin: 10px;
+}
+
+.container-checkbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+#label-rate , #label-content {
+  font-weight: 700;
+}
+
+.validation {
+  display: flex;
+  margin: 10px;
+}
+
+.validation input {
+  margin-left: 10px;
+}
+
+#label-infos {
+  align-self: center;
+  font-weight: 700;
+}
+
+.textarea {
+  margin: 10px;
+  font-weight: 700;
+}
+
+#textarea {
+  resize: none;
+  margin: 10px;
+  width: 97%;
+  height: 100px;
+}
+
+#counter {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3px 10px 0 0;
+  font-size: 13px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--btn-submit-color);
+  color: white;
+  opacity: 0.8;
+}
+
+#submit-btn:hover {
+  opacity: 1;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--header-color);
+  padding: 20px;
+}
+
+.display {
+  display: none;
+}
+
+.estrelas {
+  text-align: center;
+}
+
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: var(--star-color);
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+.ativo {
+  background-color: blueviolet;
+}
+
+.menu a[href^="#"] {
+
+}

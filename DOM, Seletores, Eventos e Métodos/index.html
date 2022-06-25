@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <title>Trybewarts</title>
+</head>
+<body>
+  
+  <header class="header">
+    <div class="container-header">
+      <img src="./images/trybewarts-header-logo.svg" alt="Logo Trybewarts" class="trybewarts-header-logo">
+    </div>
+    <div class="container-h1">
+      <h1 id="trybewarts-header-title">Trybewarts</h1>
+    </div>
+    <form action="" class="trybewarts-login">
+      <input type="email" name="email" placeholder="Email" id="email">
+      <input type="senha" name="password" id="senha" placeholder="Senha">
+      <button id="btn-form">Entrar</button>
+    </form>
+  </header>
+
+    <main>
+      <form action="" id="evaluation-form">
+        <div class="container-input">
+          <input type="text" name="Nome" id="input-name" placeholder="Nome" required>
+          <input type="text" name="Sobrenome" id="input-lastname" placeholder="Sobrenome" required>
+        </div>
+
+        <div id="container-select">
+            <input type="email" name="Email" id="input-email" placeholder="Email" required>
+        
+          <select name="selected" id="house">
+            <option value="Select a house" text="select a hoouse" disabled>Selecione uma casa</option>
+            <option value="Gitnória" text="Gitnória" id="gitnoria-house">Gitnória</option>
+            <option value="Reactpuff" text="Reactpuff" id="reactpuff-house">Reactpuff</option>
+            <option value="Corvinode" text="Corvinode" id="corvinode-house">Corvinode</option>
+            <option value="Pytherina" text="Pytherina" id="pytherina-house">Pytherina</option>
+          </select>
+        </div>
+
+        <div class="container-radio">
+          <label for="family" id="label-family">Qual sua família?</label>
+          <label for="front">Frontend</label>
+          <input type="radio" name="family" value="Frontend" id="front">
+          <label for="back">Backend</label>
+          <input type="radio" name="family" value="Backend" id="back"> 
+          <label for="full">FullStack</label>
+          <input type="radio" name="family" value="FullStack" id="full">
+        </div>
+
+        <label for="" id="label-content">Qual conteúdo você está com mais vontade de aprender?"</label><br><br>
+        <div class="container-checkbox">
+          <label for="hofs">HoFs</label>
+          <input type="checkbox" class="subject" name="subject" value="HoFs" id="hofs">
+          <label for="jest">Jest</label>
+          <input type="checkbox" class="subject" name="subject" value="Jest" id="jest">
+          <label for="promises">Promises</label>
+          <input type="checkbox" class="subject" name="subject" value="Promises" id="promises">
+          <label for="react">React</label>
+          <input type="checkbox" class="subject" name="subject" value="React" id="react">
+          <label for="sql">SQL</label>
+          <input type="checkbox" class="subject" name="subject" value="SQL" id="sql">
+          <label for="python">Python</label>
+          <input type="checkbox" class="subject" name="subject" value="Python" id="python">
+        </div>
+
+        <div class="container-radio2 estrelas">
+            <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+            <label for="cm_star-1"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-1" name="fb" value="1" class="nota"/>
+            <label for="cm_star-2"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-2" name="fb" value="2" class="nota"/>
+            <label for="cm_star-3"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-3" name="fb" value="3" class="nota"/>
+            <label for="cm_star-4"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-4" name="fb" value="4" class="nota"/>
+            <label for="cm_star-5"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-5" name="fb" value="5" class="nota"/>
+            <label for="cm_star-6"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-6" name="fb" value="6" class="nota"/>
+            <label for="cm_star-7"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-7" name="fb" value="7" class="nota"/>
+            <label for="cm_star-8"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-8" name="fb" value="8" class="nota"/>
+            <label for="cm_star-9"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-9" name="fb" value="9" class="nota"/>
+            <label for="cm_star-10"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-10" name="fb" value="10" class="nota"/>
+        </div>
+
+        <div class="container-textarea">
+          <label for="textarea" class="textarea">Deixe seu comentário:</label>
+          <textarea name="Observation" id="textarea" maxlength="500"></textarea>
+        </div>
+        <span id="counter"></span>
+
+        <div class="validation">
+          <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
+          <input type="checkbox" id="agreement">
+        </div>
+        <div class="btn-container">
+          <button type="submit" id="submit-btn" 
+          disabled>Enviar</button>
+        </div>
+      </form>
+      <form action="" id="form-data" class="display"></form>
+
+
+      <div>
+        <img src="images/trybewarts-colored.svg" alt="Logo" id="trybewarts-forms-logo">
+      </div>
+
+    </main>
+
+    <footer>
+      <p>Direitos reservados à Trybewarts©</p>
+    </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
