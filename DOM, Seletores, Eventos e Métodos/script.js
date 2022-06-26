@@ -7,6 +7,8 @@
 // const modificar = document.getElementById('email');
 // const modificar2 = document.querySelector('#email');
 // console.log(modificar);
+
+
 // console.log(modificar2);
 
 // modificar.placeholder = 'Ola';
@@ -171,7 +173,7 @@
 // Para isso, vamos ver o código completo em JS do TrybeWarts
 
 
-// // Função geral para sintaxe mais limpa
+// Função geral para sintaxe mais limpa
 // const $ = (attribute) => document.querySelector(attribute);
 // const $$ = (attribute) => document.querySelectorAll(attribute);
 
@@ -196,7 +198,7 @@
 // // Função para habiliar o submit ao clicar no checkbox
 // const enableSubmit = () => btnSubmit.disabled = !agree.checked;
 
-// // Função para criar o contador da textarea
+// Função para criar o contador da textarea
 // const createCount = () => {
 //   const counter = document.createElement('div');
 //   const span = $('#counter');

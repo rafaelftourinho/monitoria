@@ -30,7 +30,7 @@ let total = 0;
 
 function somar(item, indice) {
   total += item;
-  console.log(`[Índice ${indice}]= ${total}`)
+  console.log(`[Índice ${indice}] = ${total}`)
 }
 
 nums.forEach(somar);
@@ -43,14 +43,15 @@ nums.forEach(somar);
 // EXEMPLO 1
 {
 
-function exists(value, arr) {
+function exists(arr, value) {
   return arr.some(item => item === value);
 }
 
 const marks = [4, 5, 7, 9, 10, 2];
 
-console.log(exists(4, marks));
-console.log(exists(11, marks));
+console.log(exists(marks, 4));
+console.log(exists(marks, 11));
+console.log(marks.includes(4))
 
 }
 
@@ -100,16 +101,20 @@ console.log('ltZero:', ltZero);//true
 // EXEMPLO 1
 
 {
-const customers = [{
+const customers = [
+  {
   name: 'ABC Inc',
   credit: 100
-}, {
+}, 
+{
   name: 'ACME Corp',
   credit: 200
-}, {
+}, 
+{
   name: 'IoT AG',
   credit: 300
-}];
+}
+];
 
 console.log(customers.find(item => item.credit > 100));
 }
@@ -135,7 +140,7 @@ olhaONumero.sort();
 console.log(olhaONumero);
 
 const myNumber = [0, 1, 3, 10, 50, 100];
-myNumber.sort((a,b) => a - b);
+myNumber.sort((a,b) => b - a);
 console.log(myNumber);
 }
 
@@ -182,7 +187,7 @@ const empregados = [
 ];
 
 empregados.sort((a,b) => {
-  let x = a.name.toLowerCase(), y = b.name.toLocaleLowerCase();
+  let x = a.name.toLowerCase(), y = b.name.toLowerCase();
   // return x === y ? 0 : a > b ? 1 : -1;
   if (x == y ) {return 0
   } else return y > x ? 1 : -1;

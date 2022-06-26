@@ -1,5 +1,7 @@
 // // MAP
 
+// SINTAXE: array.map(funcao([valorAtual, índice, array]), argumentoThis);
+
 // O método map() cria uma nova matriz chamando a função de retorno de chamada fornecida como um argumento em cada elemento na matriz de entrada. o map() pegará todos os valores retornados da função de retorno de chamada e criará um novo array usando esses valores.
 
 // A função de retorno de chamada passada para o map() aceita 3 argumentos: element, index, e array. 
@@ -60,6 +62,8 @@ console.log('Idades atuais:',idades);
 
 // // FILTER
 
+// SINTAXE: array.filter(funcao([valorAtual, índice, array]), argumentoThis);
+
 // O método filter() cria uma nova matriz com todos os elementos que passam no teste fornecido pela função de retorno de chamada. A função de retorno de chamada passada para o filter() aceita 3 argumentos: element, index, e array. 
 
 // // EXEMPLO 1
@@ -113,16 +117,18 @@ const removeStudentByName = (name, listStudents) =>
   // Filtra todos os estudantes que não têm o nome 'Ricardo' e retorna um array com eles. Na prática, remove o Ricardo do array.
 
 const newListStudents = removeStudentByName('Ricardo', arrayMyStudents);
+
 console.log(newListStudents); // [ 'Maria', 'Manuela', 'Jorge', 'Wilson' ]
 }
 
 // // REDUCE
+// SINTAXE: array.reduce(funcao([accumulator,valorAtual, índice, array]), InitialValue);
 
 // O método reduce() executa a função de retorno de chamada em cada membro da matriz de chamada que resulta em um único valor de saída. O método reduce aceita dois parâmetros: 1) A função redutor (callback), 2) e um opcional initialValue.
 
 // A função redutor (callback) aceita quatro parâmetros: accumulator, currentValue, currentIndex, sourceArray.
 
-// Se um initialValue é fornecido, então o accumulatorserá igual ao initialValuee a currentValueserá igual ao primeiro elemento na matriz.
+// Se um initialValue é fornecido, então o accumulatorserá igual ao initialValuee a currentValue será igual ao primeiro elemento na matriz.
 
 // Se não initialValue é fornecido, então o accumulatorserá igual ao primeiro elemento na matriz e o currentValue será igual ao segundo elemento na matriz. 
 
@@ -138,7 +144,7 @@ const soma = array.reduce((acc, cur) => acc + cur); //sem passar o valor inicial
 
 console.log('Com HOF e sem valor de acc inicial:',soma); // 25
 
-const sum = array.reduce((acc, cur) => acc + cur, 10); //com valor inicial de acc;
+const sum = array.reduce(((acc, cur) => acc + cur), 0); //com valor inicial de acc;
 
 console.log('Com HOF e valor de acc inicial:',sum);
 }
@@ -146,6 +152,7 @@ console.log('Com HOF e valor de acc inicial:',sum);
 // SEM HOF
 
 {
+const array = [5, 7, 1, 8, 4];
 let somatorio = 0;
 
 for (let i in array) {
@@ -162,7 +169,7 @@ const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
 const verificacaoNota = (gabarito, resposta, callback) => {
-  const result = gabarito.reduce((acc,_,i) => acc + callback(gabarito[i], resposta[i]) ,0);
+  const result = gabarito.reduce((acc,_,i) => (acc + callback(gabarito[i], resposta[i])) ,0);
   return `Resultado final : ${result} pontos`;
 }
 
@@ -216,7 +223,7 @@ const pessoal = [
 
 const pessoasAgrupadas = pessoal.reduce((acc, curr) => {
   const propMaiorOuMenor = curr.idade >= 18 ? 'maiores' : 'menores';
-
+  
   acc[propMaiorOuMenor].push(curr);
 
   return acc;

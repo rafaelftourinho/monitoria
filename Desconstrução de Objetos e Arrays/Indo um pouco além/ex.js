@@ -11,7 +11,7 @@ function isInRange(value) {
   } return value >= this.lower && value <= this.upper; //retorna um booleano
 }
 
-const data = [10, 20, '30', 1, 5, 'JavaScript Filter', undefined, 'example'];
+const data = [10, 20, '30', 1, 5, 'JavaScript Filter', undefined, 'example', 3, 4 ,7];
 
 const range = {
   lower: 1,
@@ -33,18 +33,18 @@ const cities = [
   {name: 'Philadelphia', population: 1526006},
 ]
 
-// cities.filter((city) => city.population < 3000000).sort((c1,c2) => c1.population - c2.population).map((city) => console.log(`${city.name} : ${city.population}`));
+cities.filter((city) => city.population < 3000000).sort((c1,c2) => c1.population - c2.population).map((city) => console.log(`${city.name} : ${city.population}`));
 
 const filter = cities.filter((city) => city.population < 3000000);
+// console.log(filter);
 
 const sort = filter.sort((c1,c2) => c1.population - c2.population);
+// console.log(sort);
 
 const map = sort.map((city) => console.log(`${city.name} : ${city.population}`));
+// console.log(map);
 
 console.log(filter, sort, map);
-console.log(filter);
-console.log(sort);
-console.log(map);
 }
 
 // EXEMPLO 3
@@ -59,7 +59,7 @@ console.log(map);
 // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
 
 {
-const summation = (num) => [...Array(num)].map((_, i) => (i + 1)).reduce((a,b) => a + b);
+const summation = (num) => [...Array(num)].map((_, i) => (i + 1)).reduce((acc,cur) => acc + cur);
 
 const summation1 = (num) => {
   let count = 0;
@@ -69,7 +69,7 @@ const summation1 = (num) => {
   return count;
 }
 
-console.log(summation(8));
+console.log(summation(15));
 console.log(summation1(8));
 }
 
