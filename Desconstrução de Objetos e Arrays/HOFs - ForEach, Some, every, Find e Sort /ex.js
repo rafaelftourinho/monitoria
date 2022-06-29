@@ -44,14 +44,14 @@ nums.forEach(somar);
 {
 
 function exists(arr, value) {
-  return arr.some(item => item === value);
+  return arr.some((item, index )=> item[index] === value);
 }
 
-const marks = [4, 5, 7, 9, 10, 2];
+const marks = [[4, 5, 7, 9, 10, 2]];
 
 console.log(exists(marks, 4));
 console.log(exists(marks, 11));
-console.log(marks.includes(4))
+console.log(marks.includes(4));
 
 }
 
@@ -140,7 +140,7 @@ olhaONumero.sort();
 console.log(olhaONumero);
 
 const myNumber = [0, 1, 3, 10, 50, 100];
-myNumber.sort((a,b) => b - a);
+myNumber.sort((a,b) => a - b);
 console.log(myNumber);
 }
 
@@ -183,7 +183,7 @@ const empregados = [
   {name: 'Rafael', salary: 9000, hireDate: 'March 3, 2023'},
   {name: 'Wan', salary: 32000, hireDate: 'Dezember 25, 2022'},
   {name: 'Lucas', salary: 15000, hireDate: 'March 25, 2023'},
-  {name: 'Pedro', salary: 12000, hireDate: 'March 15, 2023'},
+  {name: 'pedro', salary: 12000, hireDate: 'March 15, 2023'},
 ];
 
 empregados.sort((a,b) => {

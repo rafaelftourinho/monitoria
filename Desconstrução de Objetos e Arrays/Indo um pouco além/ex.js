@@ -33,18 +33,18 @@ const cities = [
   {name: 'Philadelphia', population: 1526006},
 ]
 
-cities.filter((city) => city.population < 3000000).sort((c1,c2) => c1.population - c2.population).map((city) => console.log(`${city.name} : ${city.population}`));
+// cities.filter((city) => city.population < 3000000).sort((c1,c2) => c1.population - c2.population).map((city) => console.log(`${city.name} : ${city.population}`));
 
 const filter = cities.filter((city) => city.population < 3000000);
-// console.log(filter);
+console.log(filter);
 
 const sort = filter.sort((c1,c2) => c1.population - c2.population);
-// console.log(sort);
+console.log(sort);
 
 const map = sort.map((city) => console.log(`${city.name} : ${city.population}`));
 // console.log(map);
 
-console.log(filter, sort, map);
+console.log(filter, sort);
 }
 
 // EXEMPLO 3
@@ -59,7 +59,7 @@ console.log(filter, sort, map);
 // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
 
 {
-const summation = (num) => [...Array(num)].map((_, i) => (i + 1)).reduce((acc,cur) => acc + cur);
+const summation = (num) => [...Array(num)].map((_, i) => (i + 1)).reduce((acc,cur) => acc + cur, 0);
 
 const summation1 = (num) => {
   let count = 0;
@@ -69,8 +69,10 @@ const summation1 = (num) => {
   return count;
 }
 
-console.log(summation(15));
-console.log(summation1(8));
+console.log('método:',summation(15));
+console.log('método:',summation(8));
+console.log('For:',summation1(15));
+console.log('For:',summation1(8));
 }
 
 
@@ -81,9 +83,16 @@ const digitize = (n) => [...String(n)].reverse().map(Number);
 console.log(digitize('348597'));
 }
 
+
 // EXEMPLO 5 - Suponha que queiramos inverter os valores de um número. Como você faria? 123456789
 
 {
 const descendingOrder = n => parseInt([...String(n)].sort((a,b) => b - a).join(''))
-console.log(descendingOrder(123456789))
+console.log(descendingOrder(123456789));
+
+const inverter = n => [...String(n)].reverse().join('');
+
+console.log(inverter(123456789));
 }
+
+

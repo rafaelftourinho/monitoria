@@ -5,11 +5,11 @@
 // EXEMPLO 1
 {
 
-  function anunciarGanhadores(premio, ...ganhadores) {
-    ganhadores.forEach(ganhador => console.log(ganhador + ' ganhou um ' + premio));
+  function anunciarGanhadores(premio, valor, ...ganhadores) {
+    ganhadores.forEach(ganhador => console.log(ganhador + ' ganhou um ' + premio + " no valor de " + valor));
   }
   
-  anunciarGanhadores('carro 0km','Pedro', 'Marta', 'Maria', 'Amanda', 'Daniel', 10);
+  anunciarGanhadores('carro 0km','70 mil reais','Pedro', 'Marta', 'Maria', 'Amanda', 'Daniel', 10, undefined);
   
 }
 
@@ -42,8 +42,10 @@
 const numeros = [1, 2, 3, 4, 5];
 console.log(numeros);
 console.log(...numeros);
-const outros = [...numeros, 6, 7, 8, 9]; 
+const outros = [ 6, 7, 8, 9]; 
 console.log(outros);
+const combinacao = [...numeros, 'Rafael', 'Dani',...outros,];
+console.log(combinacao);
 }
 
 // EXEMPLO 3
@@ -75,11 +77,11 @@ const carro = { cor: 'Verde água', portas: 2, ano: 1993, marca: 'Fiat', modelo:
 console.log('Carro inicial:',carro);
 
 const cloneCarro = { ...carro, turbo: true };
-// console.log('Carro clonado:',cloneCarro)
+console.log('Carro clonado:',cloneCarro)
 
 carro.status = 'Vendido';
-// console.log('Carro inicial modificado:',carro);
-// console.log('Carro clonado:',cloneCarro)
+console.log('Carro inicial modificado:',carro);
+console.log('Carro clonado:',cloneCarro)
 
 console.log('Eles são o mesmo objeto?', carro === cloneCarro);
 

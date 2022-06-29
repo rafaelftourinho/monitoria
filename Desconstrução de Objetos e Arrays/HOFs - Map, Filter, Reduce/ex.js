@@ -31,6 +31,7 @@ const arr = [1, 2, 3];
 const arr3 = arr.map(item => item * 2);
 
 console.log(arr3);
+console.log(arr);
 }
 
 // // EXEMPLO 2
@@ -112,11 +113,11 @@ console.log('Pessoas maiores de 18 anos',fullAge);
 {
 const arrayMyStudents = ['Maria', 'Manuela', 'Jorge', 'Ricardo', 'Wilson'];
 
-const removeStudentByName = (name, listStudents) =>
+const removeStudentByName = (listStudents, name) =>
   listStudents.filter((student) => student !== name);
   // Filtra todos os estudantes que não têm o nome 'Ricardo' e retorna um array com eles. Na prática, remove o Ricardo do array.
 
-const newListStudents = removeStudentByName('Ricardo', arrayMyStudents);
+const newListStudents = removeStudentByName(arrayMyStudents, 'Ricardo');
 
 console.log(newListStudents); // [ 'Maria', 'Manuela', 'Jorge', 'Wilson' ]
 }
@@ -130,7 +131,7 @@ console.log(newListStudents); // [ 'Maria', 'Manuela', 'Jorge', 'Wilson' ]
 
 // Se um initialValue é fornecido, então o accumulatorserá igual ao initialValuee a currentValue será igual ao primeiro elemento na matriz.
 
-// Se não initialValue é fornecido, então o accumulatorserá igual ao primeiro elemento na matriz e o currentValue será igual ao segundo elemento na matriz. 
+// Se não initialValue é fornecido, então o accumulator será igual ao primeiro elemento na matriz e o currentValue será igual ao segundo elemento na matriz. 
 
 // // EXEMPLO 1
 // Digamos que temos que somar uma matriz de números: 
@@ -144,7 +145,7 @@ const soma = array.reduce((acc, cur) => acc + cur); //sem passar o valor inicial
 
 console.log('Com HOF e sem valor de acc inicial:',soma); // 25
 
-const sum = array.reduce(((acc, cur) => acc + cur), 0); //com valor inicial de acc;
+const sum = array.reduce(((acc, cur) => acc + cur), 100); //com valor inicial de acc;
 
 console.log('Com HOF e valor de acc inicial:',sum);
 }
@@ -169,7 +170,7 @@ const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
 const verificacaoNota = (gabarito, resposta, callback) => {
-  const result = gabarito.reduce((acc,_,i) => (acc + callback(gabarito[i], resposta[i])) ,0);
+  const result = gabarito.reduce((acc,_,i) => (acc + callback(gabarito[i], resposta[i])), 0);
   return `Resultado final : ${result} pontos`;
 }
 
