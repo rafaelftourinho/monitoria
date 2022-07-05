@@ -1,0 +1,37 @@
+:root {
+  --header-color: rgb(50, 167, 145);
+  --btn-color: rgb(39, 39, 146);
+  --form-color: rgb(221, 220, 220);
+  --star-color: rgb(0, 76, 255);
+  --btn-submit-color: rgb(39, 39, 146);
+}
+
+.estrelas {
+  text-align: center;
+}
+
+.estrelas input[type=radio] {
+  display: none;
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: var(--star-color);
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+#item1 {
+  background-color: blueviolet;
+}
+
+#text {
+  width: 350px;
+}
+
+.bola {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: auto auto;
+}

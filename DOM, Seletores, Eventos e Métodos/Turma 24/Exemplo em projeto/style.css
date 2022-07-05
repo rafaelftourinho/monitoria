@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  margin: 30px;
+}
+
+.selected {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+button {
+  padding: 10px;
+  border-radius: 9%;
+}
+
+#criar-tarefa , #apaga-tudo , #remover-finalizados {
+  background-color: rgb(30 , 210 , 66);
+}
+
+#remover-selecionado , #salvar-tarefas {
+  background-color: rgb(185 , 112 , 241);
+}
+
+#mover-cima , #mover-baixo {
+  background-color: blue;
+}
+
+input {
+  height: 30px;
+}

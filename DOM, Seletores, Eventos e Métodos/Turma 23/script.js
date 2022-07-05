@@ -3,52 +3,55 @@
 // COMO ACESSAMOS O DOM?
 
 // COMO SELECIONAMOS OS ELEMENTOS PARA MODIFICAR O DOM?
+{
 
-// const modificar = document.getElementById('email');
-// const modificar2 = document.querySelector('#email');
-// console.log(modificar);
+const modificar = document.getElementById('email');
+const modificar2 = document.querySelector('#email');
+console.log(modificar);
 
 
-// console.log(modificar2);
+console.log(modificar2);
 
-// modificar.placeholder = 'Ola';
-// modificar.style.backgroundColor = 'red';
+modificar.placeholder = 'Ola';
+modificar.style.backgroundColor = 'red';
+
 
 // //IMPORTANTE!
 
-//  const ola = window.getComputedStyle(modificar).backgroundColor; //SOMENTE LEITURA, USADO PARA COMPARAR
+ const ola = window.getComputedStyle(modificar).backgroundColor; //SOMENTE LEITURA, USADO PARA COMPARAR
 
-// console.log(ola);
+console.log(ola);
 
-// const lista1 = document.getElementsByClassName('subject');
-// const lista2 = document.querySelectorAll('.subject');
-// console.log(lista1); //HTML COLLECTION
-// console.log(lista2); //NODE LIST
-// console.log(Object.values(lista2)); //ARRAY
-
+const lista1 = document.getElementsByClassName('subject');
+const lista2 = document.querySelectorAll('.subject');
+console.log(lista1); //HTML COLLECTION
+console.log(lista2); //NODE LIST
+console.log(Object.values(lista2)); //ARRAY
+}
 
 // // TIPO DE SELETORES E COMO USÁ-LOS COM E SEM MÉTODOS
-
-// const comecadosCom = document.querySelectorAll('.menu a[href^="#"]'); //Não existe no site em si
-// const familia = document.querySelector('input[name=family]:checked');
-// const selecionados = document.querySelectorAll('input[type=checkbox]:checked');
-// const nota = document.querySelector('.nota:checked');
+{
+const comecadosCom = document.querySelectorAll('.menu a[href^="#"]'); //Não existe no site em si
+const familia = document.querySelector('input[name=family]:checked');
+const selecionados = document.querySelectorAll('input[type=checkbox]:checked');
+const nota = document.querySelector('.nota:checked');
+}
 
 // // Exemplo 1 - Sem método
 
-// /**Função para percorrer o array criado
-//  * @param nenhum
-//  * @returns result */
-// const valoresRetornados = () => {
-//   let result = '';
-//   for (let valores of selecionados) {
-//     result += `${valores.value} `;
-//   }
-//   return result
-// }
+/**Função para percorrer o array criado
+ * @param nenhum
+ * @returns result */
+const valoresRetornados = () => {
+  let result = '';
+  for (let valores of selecionados) {
+    result += `${valores.value} `;
+  }
+  return result
+}
 
-// `${valoresRetornados()}`
-// console.log(`Matérias: ${valoresRetornados()}`)
+`${valoresRetornados()}`
+console.log(`Matérias: ${valoresRetornados()}`)
 
 // // Exemplo 2 - forEach
 
@@ -265,13 +268,13 @@
 // btnForm.addEventListener('click', () => {
 //   btnForm.innerText = 'Clicamos, mané'
 // })
-// window.addEventListener('mousedown', ({ target }) => {
-//   target.innerText = 'Clicamos aqui';
-//   target.style.opacity = '0.4'
-// });
-// window.addEventListener('mouseup', ({ target }) => {
-//   target.style.backgroundColor = 'blue';
-// })
+window.addEventListener('mousedown', ({ target }) => {
+  target.innerText = 'Clicamos aqui';
+  target.style.opacity = '0.4'
+});
+window.addEventListener('mouseup', ({ target }) => {
+  target.style.backgroundColor = 'blue';
+})
 //   footer.addEventListener('click', () => {
 //   footer.classList.toggle('ativo');
 // } )
