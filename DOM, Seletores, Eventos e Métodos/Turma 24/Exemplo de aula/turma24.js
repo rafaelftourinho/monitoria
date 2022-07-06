@@ -1,20 +1,24 @@
-// O QUE É O DOM E PARA QUE SERVE?
-
 // COMO ACESSAMOS O DOM?
+
+// const array = [0,1,2,3,4];
+// array.push(10);
 
 // COMO SELECIONAMOS OS ELEMENTOS PARA MODIFICAR O DOM?
 
 {
   // const modificar = document.getElementById('item1');
   // const modificar2 = document.querySelector('.subject');
+  // const algumaCoisa = document.querySelectorAll('.subject');
   // const modificar3 = document.querySelector('#item2');
   // const modificar4 = document.querySelector('#item3');
   // const inputText = document.querySelector('#text');
   
   // modificar.textContent = 'Ola turma 24!';
+  // modificar.innerHTML = 'Olá';
+  // modificar3.innerText = 'vamo lá';
   // modificar.style.backgroundColor = 'red';
   // modificar2.innerText = 'Hello!'
-  // modificar2.style.border = '5px solid black'
+  // modificar2.style.border = '5px solid brown'
   // modificar3.style.backgroundColor = 'blue';
   // modificar4.style.textTransform = 'uppercase';
   // inputText.placeholder = 'Mudamos o que quisermos se soubermos acessar';
@@ -25,8 +29,6 @@
   // //IMPORTANTE!
   
   //  const ola = window.getComputedStyle(modificar).backgroundColor; //SOMENTE LEITURA, USADO PARA COMPARAR
-  
-  // console.log(ola);
   
   // const lista1 = document.getElementsByClassName('subject');
   // const lista2 = document.querySelectorAll('.subject');
@@ -55,15 +57,14 @@
 // const item = document.createElement('li');
 // item.id = 'Item4';
 // item.style.textTransform = 'lowercase';
-// item.style.border = '10px solid yellow'
-// item.textContent = 'Item 4';
+// item.style.border = '10px solid yellow';
+// item.innerText = 'Item 4';
 // ul.appendChild(item);
 
 // function criarBola() {
 //   for (let i = 0; i < 3; i += 1) {
 //     const bola = document.createElement('div');
 //     const divBola = document.querySelector('.bola');
-//     bola.id = 'bola';
 //     bola.classList.add('bola');
 //     bola.style.weigth = '100%';
 //     bola.style.height = '100%';
@@ -109,16 +110,25 @@
   // azin.addEventListener('mouseover', () => azin.textContent = 'Muda AE');
   // azin.addEventListener('mouseup', () => azin.style.backgroundColor = 'black');
 
-  // window.addEventListener('mousedown', ({ target }) => {
-  //   target.innerText = 'Clicamos aqui';
-  //   target.style.opacity = '0.4'
+  // window.addEventListener('mousedown', (event) => {
+  //   event.target.innerText = 'Clicamos aqui';
+  //   event.target.style.opacity = '0.4'
   // });
 
-  // window.addEventListener('mouseup', ({ target }) => {
-  //   target.style.backgroundColor = 'blue';
+  // window.addEventListener('mouseup', (e) => {
+  //   e.target.style.backgroundColor = 'blue';
   // })
 
-//   const bola = document.querySelectorAll('.bola');
+  // const bola = document.querySelectorAll('.bola');
 // bola.forEach(item => item.addEventListener('click', (e) => e.target.style.width = '50px'));
 // bola.forEach(item => item.addEventListener('click', ({ target }) => target.style.backgroundColor = 'blue'));
+// bola.addEventListener('click', (e) => e.target.style.backgroundColor = 'black');
+}
+
+// BÔNUS !!
+{
+const text = document.querySelector('#text')
+setTimeout(function(){ text.value="2 seconds" }, 2000);
+setTimeout(function(){ text.value="4 seconds" }, 4000);
+setTimeout(function(){ text.value="6 seconds" }, 6000);
 }
