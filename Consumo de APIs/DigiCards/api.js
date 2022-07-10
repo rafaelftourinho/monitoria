@@ -6,25 +6,25 @@ const digiText = document.querySelector('.card-text');
 const fetchAPI = async () => {
   const response = await fetch('https://digimon-api.vercel.app/api/digimon');
   const data = await response.json();
+
   return data;
 }
 
-function digiAPI() {
-
-  input.addEventListener('change', async ({ target }) => {
+async function test({ target }) {
     const digiArr = await fetchAPI();
 
     const find = digiArr.find(({ name }) => name.toLowerCase() === target.value.toLowerCase());
 
-    const image = find.img;
-    const { name, level } = find;
+    const { name, level, img } = find;
 
     digiText.innerText = `${name} é um digimon do tipo ${level}`;
     digiTitle.innerHTML = name;
-    imgDigi.src = image;
+    imgDigi.src = img;
 
-    return find;
-  })
+  }
+
+function digiAPI() {
+  input.addEventListener('change', test);
 }
 
 window.onload = () => digiAPI();
