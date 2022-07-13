@@ -1,16 +1,17 @@
-// // MAP
+//TODO                                                                           MAP
 
-// SINTAXE: array.map(funcao([valorAtual, índice, array]), argumentoThis);
+//* SINTAXE: array.map(funcao([valorAtual, índice, array]), argumentoThis);
 
-// O método map() cria uma nova matriz chamando a função de retorno de chamada fornecida como um argumento em cada elemento na matriz de entrada. o map() pegará todos os valores retornados da função de retorno de chamada e criará um novo array usando esses valores.
+//? O método map() cria uma nova matriz chamando a função de retorno de chamada fornecida como um argumento em cada elemento na matriz de entrada. o map() pegará todos os valores retornados da função de retorno de chamada e criará um novo array usando esses valores.
 
-// A função de retorno de chamada passada para o map() aceita 3 argumentos: element, index, e array. 
+//? A função de retorno de chamada passada para o map() aceita 3 argumentos: element, index, e array. 
 
 
-// // EXEMPLO 1
-// Digamos que temos um array de números e queremos criar um novo array que contenha o dobro de cada valor do primeiro array. Vamos ver como podemos resolver o problema com e sem função de ordem superior. 
+//* EXEMPLO 1
 
-// SEM HOF
+//* Digamos que temos um array de números e queremos criar um novo array que contenha o dobro de cada valor do primeiro array. Vamos ver como podemos resolver o problema com e sem função de ordem superior. 
+
+//* SEM HOF
 
 {
 const arr1 = [1, 2, 3];
@@ -23,7 +24,7 @@ for (let i in arr1) {
 console.log(arr2)
 }
 
-// COM HOF
+//* COM HOF
 
 {
 const arr = [1, 2, 3];
@@ -34,10 +35,11 @@ console.log(arr3);
 console.log(arr);
 }
 
-// // EXEMPLO 2
-// Digamos que temos um array contendo o ano de nascimento de diferentes pessoas e queremos criar um array que contenha suas idades. Por exemplo: 
+//* EXEMPLO 2
 
-// SEM HOF
+//? Digamos que temos um array contendo o ano de nascimento de diferentes pessoas e queremos criar um array que contenha suas idades. Por exemplo: 
+
+//* SEM HOF
 
 {
 const birth = [1975, 1997, 2002, 1995, 1985];
@@ -51,7 +53,7 @@ for (let i in birth) {
 console.log(ages);
 }
 
-// COM HOF
+//* COM HOF
 
 {
 const aniversario = [1975, 1997, 2002, 1995, 1985];
@@ -61,16 +63,17 @@ const idades = aniversario.map(year => 2022 - year);
 console.log('Idades atuais:',idades);
 }
 
-// // FILTER
+//TODO                                                                       FILTER
 
-// SINTAXE: array.filter(funcao([valorAtual, índice, array]), argumentoThis);
+//* SINTAXE: array.filter(funcao([valorAtual, índice, array]), argumentoThis);
 
-// O método filter() cria uma nova matriz com todos os elementos que passam no teste fornecido pela função de retorno de chamada. A função de retorno de chamada passada para o filter() aceita 3 argumentos: element, index, e array. 
+//? O método filter() cria uma nova matriz com todos os elementos que passam no teste fornecido pela função de retorno de chamada. A função de retorno de chamada passada para o filter() aceita 3 argumentos: element, index, e array. 
 
-// // EXEMPLO 1
-// Digamos que temos um array que contém objetos com propriedades name e age. Queremos criar um array que contenha apenas as pessoas com maior idade (idade maior ou igual a 18 anos). 
+//* EXEMPLO 1
 
-// SEM HOF
+//? Digamos que temos um array que contém objetos com propriedades name e age. Queremos criar um array que contenha apenas as pessoas com maior idade (idade maior ou igual a 18 anos). 
+
+//* SEM HOF
 
 {
 const pessoas = [ 
@@ -92,7 +95,7 @@ for(let i = 0; i < pessoas.length; i++) {
 console.log(idadeCompleta);
 }
 
-// COM HOF
+//* COM HOF
 
 {
 const peoples = [
@@ -108,7 +111,7 @@ const fullAge = peoples.filter(people => people.age >= 18);
 console.log('Pessoas maiores de 18 anos',fullAge);
 }
 
-// EXEMPLO 2
+//* EXEMPLO 2
 
 {
 const arrayMyStudents = ['Maria', 'Manuela', 'Jorge', 'Ricardo', 'Wilson'];
@@ -122,21 +125,24 @@ const newListStudents = removeStudentByName(arrayMyStudents, 'Ricardo');
 console.log(newListStudents); // [ 'Maria', 'Manuela', 'Jorge', 'Wilson' ]
 }
 
-// // REDUCE
-// SINTAXE: array.reduce(funcao([accumulator,valorAtual, índice, array]), InitialValue);
+//TODO                                                                          REDUCE
+/** 
+ * *SINTAXE: array.reduce(funcao([accumulator,valorAtual, índice, array]), InitialValue);
 
-// O método reduce() executa a função de retorno de chamada em cada membro da matriz de chamada que resulta em um único valor de saída. O método reduce aceita dois parâmetros: 1) A função redutor (callback), 2) e um opcional initialValue.
+ *? O método reduce() executa a função de retorno de chamada em cada membro da matriz de chamada que resulta em um único valor de saída. O método reduce aceita dois parâmetros: 1) A função redutor (callback), 2) e um opcional initialValue.
 
-// A função redutor (callback) aceita quatro parâmetros: accumulator, currentValue, currentIndex, sourceArray.
+ *? A função redutor (callback) aceita quatro parâmetros: accumulator, currentValue, currentIndex, sourceArray.
 
-// Se um initialValue é fornecido, então o accumulatorserá igual ao initialValuee a currentValue será igual ao primeiro elemento na matriz.
+ *? Se um initialValue é fornecido, então o accumulatorserá igual ao initialValuee a currentValue será igual ao primeiro elemento na matriz.
 
-// Se não initialValue é fornecido, então o accumulator será igual ao primeiro elemento na matriz e o currentValue será igual ao segundo elemento na matriz. 
+ *? Se não initialValue é fornecido, então o accumulator será igual ao primeiro elemento na matriz e o currentValue será igual ao segundo elemento na matriz. 
+ */
 
-// // EXEMPLO 1
-// Digamos que temos que somar uma matriz de números: 
+//*  EXEMPLO 1
 
-// COM HOF
+//? Digamos que temos que somar uma matriz de números: 
+
+//* COM HOF
 
 {
 const array = [5, 7, 1, 8, 4];
@@ -150,7 +156,7 @@ const sum = array.reduce(((acc, cur) => acc + cur), 100); //com valor inicial de
 console.log('Com HOF e valor de acc inicial:',sum);
 }
 
-// SEM HOF
+//* SEM HOF
 
 {
 const array = [5, 7, 1, 8, 4];
@@ -163,7 +169,7 @@ for (let i in array) {
 console.log('Sem HOF (usando for-in):',somatorio);
 }
 
-// EXEMPLO 2 - utilização do reduce com novos parâmetros
+//* EXEMPLO 2 - utilização do reduce com novos parâmetros
 
 {
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
@@ -184,7 +190,7 @@ const comparacaoNumeros = (gabarito, resposta) => {
 console.log(verificacaoNota(RIGHT_ANSWERS, STUDENT_ANSWERS, comparacaoNumeros));
 }
 
-// EXEMPLO 3 - construíndo um objeto com reduce
+//* EXEMPLO 3 - construíndo um objeto com reduce
 
 {
 const pessoal = [
@@ -233,9 +239,45 @@ const pessoasAgrupadas = pessoal.reduce((acc, curr) => {
 console.log('Pessoas Agrupadas', pessoasAgrupadas);
 }
 
-// // CONSTRUÍNDO NOSSA PROPRIA HOF
+//* Exemplo 4
 
-// Digamos que temos um array de strings e queremos converter esse array em um array de inteiros, onde cada elemento representa o comprimento da string no array original. 
+{
+const wizards = [
+	{
+		name: 'Harry Potter',
+		house: 'Gryfindor'
+	},
+	{
+		name: 'Cedric Diggory',
+		house: 'Hufflepuff'
+	},
+	{
+		name: 'Tonks',
+		house: 'Hufflepuff'
+	},
+	{
+		name: 'Ronald Weasley',
+		house: 'Gryfindor'
+	},
+	{
+		name: 'Hermione Granger',
+		house: 'Gryfindor'
+	}
+];
+
+const hufflepuff = wizards.reduce((newArr, wizard) => {
+	if (wizard.house === 'Hufflepuff') {
+		newArr.push(wizard.name);
+	}
+	return newArr;
+}, []);
+
+console.log(hufflepuff);
+}
+
+//* CONSTRUÍNDO NOSSA PROPRIA HOF
+
+//? Digamos que temos um array de strings e queremos converter esse array em um array de inteiros, onde cada elemento representa o comprimento da string no array original. 
 
 {
 const strArray = ['JavaScript', 'Python', 'PHP', 'Java', 'C'];

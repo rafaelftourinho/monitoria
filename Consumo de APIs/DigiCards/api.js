@@ -3,6 +3,7 @@ const imgDigi = document.querySelector('#img-digi');
 const digiTitle = document.querySelector('.card-title');
 const digiText = document.querySelector('.card-text');
 
+
 const fetchAPI = async () => {
   const response = await fetch('https://digimon-api.vercel.app/api/digimon');
   const data = await response.json();
@@ -20,7 +21,6 @@ async function test({ target }) {
     digiText.innerText = `${name} é um digimon do tipo ${level}`;
     digiTitle.innerHTML = name;
     imgDigi.src = img;
-
   }
 
 function digiAPI() {

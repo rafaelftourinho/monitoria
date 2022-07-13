@@ -1,8 +1,8 @@
-// FOREACH
+//TODO                                                                         FOREACH
 
-// SINTAXE: array.forEach(funcao([valorAtual, índice, array]), argumentoThis)
+//* SINTAXE: array.forEach(funcao([valorAtual, índice, array]), argumentoThis)
 
-// EXEMPLO 1
+//* EXEMPLO 1
 
 {
 const numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -22,7 +22,7 @@ const tabuadaDeDois = () => {
 tabuadaDeDois();
 }
 
-// EXEMPLO 2
+//* EXEMPLO 2
 
 {
 const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -36,11 +36,11 @@ function somar(item, indice) {
 nums.forEach(somar);
 }
 
-// SOME 
+//TODO                                                                           SOME 
 
-// SINTAXE: array.some(funcao([valorAtual, índice, array]), argumentoThis);
+//* SINTAXE: array.some(funcao([valorAtual, índice, array]), argumentoThis);
 
-// EXEMPLO 1
+//* EXEMPLO 1
 {
 
 function exists(arr, value) {
@@ -55,7 +55,7 @@ console.log(marks.includes(4));
 
 }
 
-// EXEMPLO 2
+//* EXEMPLO 2
 
 {
 let result = [].some(item => item > 0);
@@ -66,11 +66,11 @@ console.log(result);
 
 }
 
-// EVERY
+//TODO                                                                           EVERY
 
-// SINTAXE: array.every(funcao([valorAtual, índice, array]), argumentoThis);
+//* SINTAXE: array.every(funcao([valorAtual, índice, array]), argumentoThis);
 
-// EXEMPLO 1
+//* EXEMPLO 1
 
 {
 const numbers = [1, 3, 5];
@@ -84,7 +84,7 @@ const isEven = numbers.every(item => (item % 2 === 0));
 console.log('Todos os números são pares:',isEven);
 }
 
-// EXEMPLO 2
+//* EXEMPLO 2
 
 {
 const gtZero = [].every(item => item > 0); 
@@ -94,11 +94,11 @@ console.log('gtZero:', gtZero);//true
 console.log('ltZero:', ltZero);//true
 }
 
-// FIND
+//TODO                                                                           FIND
 
-// SINTAXE: array.find(funcao([valorAtual, índice, array]), argumentoThis);
+//* SINTAXE: array.find(funcao([valorAtual, índice, array]), argumentoThis);
 
-// EXEMPLO 1
+//* EXEMPLO 1
 
 {
 const customers = [
@@ -119,7 +119,7 @@ const customers = [
 console.log(customers.find(item => item.credit > 100));
 }
 
-// EXEMPLO 2
+//* EXEMPLO 2
 
 {
 const num = [1, 2, 3, 4, 5, 6];
@@ -128,11 +128,11 @@ console.log(num.find(item => (item % 2 === 0)));
 
 }
 
-// SORT
+//TODO                                                                           SORT
 
-// OBS: O MÉTODO SORT, POR PADRÃO ELE CLASSIFICA OS ELEMENTOS EM ORDEM CRESCRENTE PARA STRINGS. CASO NÃO SE PASSE PARÂMETROS PARA NÚMEROS, ELE IRÁ REORDENAR EM UNICODE.
+//? OBS: O MÉTODO SORT, POR PADRÃO ELE CLASSIFICA OS ELEMENTOS EM ORDEM CRESCRENTE PARA STRINGS. CASO NÃO SE PASSE PARÂMETROS PARA NÚMEROS, ELE IRÁ REORDENAR EM UNICODE.
 
-// EXEMPLO 1
+//* EXEMPLO 1
 
 {
 const olhaONumero = [0, 1, 3, 10, 50, 100];
@@ -144,7 +144,7 @@ myNumber.sort((a,b) => a - b);
 console.log(myNumber);
 }
 
-// EXEMPLO 2
+//* EXEMPLO 2
 
 {
 const animals = ['gato', 'cachorro', 'elefante', 'abelha', 'papagaio'];
@@ -166,7 +166,7 @@ mixedCaseAnimals.sort((a,b) => {
 console.log(mixedCaseAnimals);
 }
 
-// EXEMPLO 3
+//* EXEMPLO 3
 
 {
 const employees = [

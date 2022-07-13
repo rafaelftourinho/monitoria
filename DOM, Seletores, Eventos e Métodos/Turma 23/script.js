@@ -1,22 +1,22 @@
-// O QUE É O DOM E PARA QUE SERVE?
+//* O QUE É O DOM E PARA QUE SERVE?
 
-// COMO ACESSAMOS O DOM?
+//* COMO ACESSAMOS O DOM?
 
-// COMO SELECIONAMOS OS ELEMENTOS PARA MODIFICAR O DOM?
+//* COMO SELECIONAMOS OS ELEMENTOS PARA MODIFICAR O DOM?
 {
 
-const modificar = document.getElementById('email');
-const modificar2 = document.querySelector('#email');
-console.log(modificar);
+// const modificar = document.getElementById('email');
+// const modificar2 = document.querySelector('#email');
+// console.log(modificar);
 
 
-console.log(modificar2);
+// console.log(modificar2);
 
-modificar.placeholder = 'Ola';
-modificar.style.backgroundColor = 'red';
+// modificar.placeholder = 'Ola';
+// modificar.style.backgroundColor = 'red';
 
 
-// //IMPORTANTE!
+//TODO                                                              IMPORTANTE!
 
  const ola = window.getComputedStyle(modificar).backgroundColor; //SOMENTE LEITURA, USADO PARA COMPARAR
 
@@ -29,7 +29,7 @@ console.log(lista2); //NODE LIST
 console.log(Object.values(lista2)); //ARRAY
 }
 
-// // TIPO DE SELETORES E COMO USÁ-LOS COM E SEM MÉTODOS
+//TODO                                             TIPO DE SELETORES E COMO USÁ-LOS COM E SEM MÉTODOS
 {
 const comecadosCom = document.querySelectorAll('.menu a[href^="#"]'); //Não existe no site em si
 const familia = document.querySelector('input[name=family]:checked');
@@ -37,8 +37,8 @@ const selecionados = document.querySelectorAll('input[type=checkbox]:checked');
 const nota = document.querySelector('.nota:checked');
 }
 
-// // Exemplo 1 - Sem método
-
+//* Exemplo 1 - Sem método
+{
 /**Função para percorrer o array criado
  * @param nenhum
  * @returns result */
@@ -52,29 +52,32 @@ const valoresRetornados = () => {
 
 `${valoresRetornados()}`
 console.log(`Matérias: ${valoresRetornados()}`)
+}
 
-// // Exemplo 2 - forEach
-
-// /**Função para percorrer o array criado 
-//  * @param nenhum
-//  * @returns valor */
-// const valoresForEach = () => {
-//   let valor = `Matérias: `;
-//   selecionados.forEach((item) => {
-//     valor += `${item.value}, `;
-//   })
-//   return valor;
-// }
+//* Exemplo 2 - forEach
+{
+/**Função para percorrer o array criado 
+ * @param nenhum
+ * @returns valor */
+const valoresForEach = () => {
+  let valor = `Matérias: `;
+  selecionados.forEach((item) => {
+    valor += `${item.value}, `;
+  })
+  return valor;
+}
 // console.log(valoresForEach());
+}
 
-// // Exemplo 3 - spread, map e join
-
+//* Exemplo 3 - spread, map e join
+{
 // console.log(`Matérias: ${[...selecionados].map((param) => param.value).join(', ')}`);
 // console.log(`Família: ${familia.value}`)
 // console.log(`Nota: ${nota.value}`);
+}
 
-// // Exemplo 4 - com objetos e construtores
-
+//* Exemplo 4 - com objetos e construtores
+{
 // const Dom = {
 //   seletor: 'li',
 //   element() {
@@ -112,20 +115,21 @@ console.log(`Matérias: ${valoresRetornados()}`)
 // const lastLi = new Dom('li:last-child');
 // lastLi.ativar('Ativo');
 // lastLi.desativar('Ativo');
+}
 
-// // ALGUMAS COISAS INTERESSANTES SOBRE MÉTODOS VARIADOS
-
+//* ALGUMAS COISAS INTERESSANTES SOBRE MÉTODOS VARIADOS
+{
 // const string = 'Uma, coisa, de, cada, vez';
 // console.log([...string]);
 // console.log(Array(string));
 // console.log(Array.from(string));
 // console.log(string.split(','));
+}
 
+//* Observação importante sobre o arguments
 
-// //Observação importante sobre o arguments
-
-// // Você pode usar o objeto arguments se você chamar uma função com mais argumentos do que ele é formalmente declarado para aceitar. Esta técnica é útil para funções que podem ser passada em um número de variáveis de argumentos. Você pode usar arguments.length para determinar o número de argumentos passado para a função, e então processar cada argumento usando o objeto arguments
-
+//? Você pode usar o objeto arguments se você chamar uma função com mais argumentos do que ele é formalmente declarado para aceitar. Esta técnica é útil para funções que podem ser passada em um número de variáveis de argumentos. Você pode usar arguments.length para determinar o número de argumentos passado para a função, e então processar cada argumento usando o objeto arguments
+{
 // function sum() {
 //   console.log([...arguments])
 //   return [...arguments].reduce((a, b) => {
@@ -159,7 +163,7 @@ console.log(`Matérias: ${valoresRetornados()}`)
 // console.log(toArray(1, 'ala', null, undefined, [1,2,3]));
 // const olaa = toArray(1, 'ala', null, undefined, [1,2,3]);
 
-// // // OBS: podemos usar Array.from(arguments);
+//? OBS: podemos usar Array.from(arguments);
 
 // const classification = toArray('Olá,', 'como', 'vocês', 'estão?');
 // console.log(classification);
@@ -169,112 +173,112 @@ console.log(`Matérias: ${valoresRetornados()}`)
 //   return args;
 // }
 // console.log(foo(1, 2, 3)); // [1,2,3]
+}
 
+//TODO                                                                     EVENTOS 
+//* Como fazemos para adicionar um evento em algo que queremos?
+//? Para isso, vamos ver o código completo em JS do TrybeWarts
 
-// EVENTOS 
-// Como fazemos para adicionar um evento em algo que queremos?
-// Para isso, vamos ver o código completo em JS do TrybeWarts
-
-
+{
 // Função geral para sintaxe mais limpa
-// const $ = (attribute) => document.querySelector(attribute);
-// const $$ = (attribute) => document.querySelectorAll(attribute);
+const $ = (attribute) => document.querySelector(attribute);
+const $$ = (attribute) => document.querySelectorAll(attribute);
 
-// const nome = $('#input-name');
-// const lastname = $('#input-lastname');
-// const house = $('#house');
-// const observation = $('#textarea');
-// const formUser = $('#evaluation-form');
-// const btnSubmit = $('#submit-btn');
-// const emailForm = $('#input-email');
-// const agree = $('#agreement');
+const nome = $('#input-name');
+const lastname = $('#input-lastname');
+const house = $('#house');
+const observation = $('#textarea');
+const formUser = $('#evaluation-form');
+const btnSubmit = $('#submit-btn');
+const emailForm = $('#input-email');
+const agree = $('#agreement');
 
-// // Função de checar os dados
-// const checarDados = () => {
-//   const senha = $('#senha');
-//   const email = $('#email');
-//   if (email.value === 'tryber@teste.com' && senha.value === '123456') {
-//     alert('Olá, Tryber!');
-//   } else alert('Email ou senha inválidos.');
-// };
+// Função de checar os dados
+const checarDados = () => {
+  const senha = $('#senha');
+  const email = $('#email');
+  if (email.value === 'tryber@teste.com' && senha.value === '123456') {
+    alert('Olá, Tryber!');
+  } else alert('Email ou senha inválidos.');
+};
 
-// // Função para habiliar o submit ao clicar no checkbox
-// const enableSubmit = () => btnSubmit.disabled = !agree.checked;
+// Função para habiliar o submit ao clicar no checkbox
+const enableSubmit = () => btnSubmit.disabled = !agree.checked;
 
 // Função para criar o contador da textarea
-// const createCount = () => {
-//   const counter = document.createElement('div');
-//   const span = $('#counter');
-//   counter.id = 'counter';
-//   counter.innerText = 500;
-//   span.appendChild(counter);
-// };
+const createCount = () => {
+  const counter = document.createElement('div');
+  const span = $('#counter');
+  counter.id = 'counter';
+  counter.innerText = 500;
+  span.appendChild(counter);
+};
 
-// // Função para checar o tamanho da textarea
-// const checkCounter = () => {
-//   const textarea = $('#textarea');
-//   const divCount = $('#counter');
-//   const maxChars = textarea.getAttribute('maxlength');
-//   const text = textarea.value.length;
-//   const rest = maxChars - text;
-//   divCount.innerText = `${rest}/500`;
-// };
+// Função para checar o tamanho da textarea
+const checkCounter = () => {
+  const textarea = $('#textarea');
+  const divCount = $('#counter');
+  const maxChars = textarea.getAttribute('maxlength');
+  const text = textarea.value.length;
+  const rest = maxChars - text;
+  divCount.innerText = `${rest}/500`;
+};
 
-// // Função para captar as escolhas do usuário
-// const formAvaliation = (e) => {
-//   e.preventDefault();
+// Função para captar as escolhas do usuário
+const formAvaliation = (e) => {
+  e.preventDefault();
 
-//   const family = $('input[name=family]:checked');
-//   const contents = $$('.subject:checked');
-//   const note = $('input[name=rate]:checked');
-//   const result = $('#form-data');
+  const family = $('input[name=family]:checked');
+  const contents = $$('.subject:checked');
+  const note = $('input[name=rate]:checked');
+  const result = $('#form-data');
 
-//   formUser.style.display = 'none';
-//   result.classList.toggle('display');
-//   result.innerText = `
-//   Nome: ${nome.value} ${lastname.value}
-//   Email: ${emailForm.value}
-//   Casa: ${house.value}
-//   Família: ${family.value}
-//   Matérias: ${[...contents].map((content) => content.value).join(', ')}
-//   Avaliação: ${note.value}
-//   Observações: ${observation.value};
-//   `;
-// };
+  formUser.style.display = 'none';
+  result.classList.toggle('display');
+  result.innerText = `
+  Nome: ${nome.value} ${lastname.value}
+  Email: ${emailForm.value}
+  Casa: ${house.value}
+  Família: ${family.value}
+  Matérias: ${[...contents].map((content) => content.value).join(', ')}
+  Avaliação: ${note.value}
+  Observações: ${observation.value};
+  `;
+};
 
-// // Função de escuta dos eventos
-// const eventListener = () => {
-//   const agree = $('#agreement');
-//   const textarea = $('#textarea');
-//   const btnForm = $('#btn-form');
-//   btnForm.addEventListener('click', checarDados);
-//   agree.addEventListener('change', enableSubmit);
-//   textarea.addEventListener('input', checkCounter);
-//   formUser.addEventListener('submit', formAvaliation);
-// };
+// Função de escuta dos eventos
+const eventListener = () => {
+  const agree = $('#agreement');
+  const textarea = $('#textarea');
+  const btnForm = $('#btn-form');
+  btnForm.addEventListener('click', checarDados);
+  agree.addEventListener('change', enableSubmit);
+  textarea.addEventListener('input', checkCounter);
+  formUser.addEventListener('submit', formAvaliation);
+};
 
-// window.onload = () => {
-//   eventListener();
-//   createCount();
-//   novosEventos();
-// };
+window.onload = () => {
+  eventListener();
+  createCount();
+  novosEventos();
+};
+}
 
-
-// E SE QUISERMOS ADICIONAR MAIS EVENTOS AO CÓDIGO?
-
+//* E SE QUISERMOS ADICIONAR MAIS EVENTOS AO CÓDIGO?
+{
 // const novosEventos = () => {
 // const btnForm = $('#btn-form');
 // const footer = $('footer');
 // btnForm.addEventListener('click', () => {
 //   btnForm.innerText = 'Clicamos, mané'
 // })
-window.addEventListener('mousedown', ({ target }) => {
-  target.innerText = 'Clicamos aqui';
-  target.style.opacity = '0.4'
-});
-window.addEventListener('mouseup', ({ target }) => {
-  target.style.backgroundColor = 'blue';
-})
+// window.addEventListener('mousedown', ({ target }) => {
+//   target.innerText = 'Clicamos aqui';
+//   target.style.opacity = '0.4'
+// });
+// window.addEventListener('mouseup', ({ target }) => {
+//   target.style.backgroundColor = 'blue';
+// })
 //   footer.addEventListener('click', () => {
 //   footer.classList.toggle('ativo');
 // } )
@@ -291,3 +295,4 @@ window.addEventListener('mouseup', ({ target }) => {
 //   lastname.style.fontWeight = '900'
 // });
 // };
+}

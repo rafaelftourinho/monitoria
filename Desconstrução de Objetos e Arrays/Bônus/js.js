@@ -1,4 +1,4 @@
-// Parâmetros sendo passados com default no início da função
+//* Parâmetros sendo passados com default no início da função
 
 function createButton(background = 'blue', color = 'red') {
   const btnElement = document.createElement('button');
@@ -10,7 +10,7 @@ function createButton(background = 'blue', color = 'red') {
 const redBtn = createButton();
 
 
-// Utilize o método push para inserir as frutas ao final de comidas.
+//* Utilize o método push para inserir as frutas ao final de comidas.
 
 const frutas = ['Banana', 'Uva', 'Morango'];
 const comidas = ['Arroz', 'Lasanha'];
@@ -19,9 +19,9 @@ comidas.push(...frutas);
 console.log(comidas);
 
 
-// MÉTODOS DE STRING
+//TODO                                                               MÉTODOS DE STRING
 
-// EXEMPLO 1 - split e join
+//* EXEMPLO 1 - split e join
 
 const htmlText = '<div> O melhor item </div><div> A melhor lista </div>';
 const htmlArray = htmlText.split('div');
@@ -32,13 +32,13 @@ const novoHtml = htmlArray.join('section');
 console.log(novoHtml);
 
 
-// EXEMPLO 2 - trim
+//* EXEMPLO 2 - trim
 
 const valor = '    R$35,00    ';
 console.log(valor);
 console.log(valor.trim());
 
-// EXEMPLO 3 - replace e slice
+//* EXEMPLO 3 - replace e slice
 
 const transacoes = [
   {
@@ -76,9 +76,9 @@ transacoes.forEach(item => {
 console.log('Taxa Total:',taxaTotal);
 console.log('Recebimento Total:',recebimentoTotal);
 
-// MÉTODO DE NUMBER e MATH
+//TODO                                                             MÉTODO DE NUMBER e MATH
 
-// EXEMPLO 1 - toLocaleString
+//* EXEMPLO 1 - toLocaleString
 
 const value = 48.49;
 const valueReal = value.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
@@ -88,11 +88,11 @@ const valueDol = value.toLocaleString('en-US', {style: 'currency', currency: 'US
 console.log(valueDol);
 console.log(typeof valueDol);
 
-// EXEMPLO 2 - Math.PI
+//* EXEMPLO 2 - Math.PI
 
 console.log(Math.PI);
 
-// EXEMPLO 3 Math.abs, Math.ceil, Math.floor, Math.round, Math.random
+//* EXEMPLO 3 Math.abs, Math.ceil, Math.floor, Math.round, Math.random
 
 console.log(Math.abs(3 - 6)); // valor absoluto - módulo
 console.log(Math.ceil(2.3)); // arredonda para cima
@@ -101,7 +101,7 @@ console.log(Math.round(4.4)); // arredonda para baixa até 0.4
 console.log(Math.round(4.6)); // arredonda para cima de 0.5
 console.log(Math.random()); // devolve um número aleatório entre 0 e 1
 
-// TRANSFORMANDO UM OBJETO EM ARRAY
+//TODO                                                           TRANSFORMANDO UM OBJETO EM ARRAY
 
 const obj = {
   0: 'Rafael',
@@ -116,3 +116,59 @@ console.log(objArray); // ['Rafael', 'Renato', 'Rodrigo'];
 console.log(Array.isArray(objArray));
 
 
+const objeto1 = [{
+  nome: 'Dani',
+  idade: 32,
+},
+{
+  nome: 'Rafael',
+  idade: 32,
+},
+];
+
+console.log(objeto1.filter(item => item.idade === 32));
+
+const nomes = ['Helena', 'Miguel', 'Alice', 'Heitor', 'Laura', 'Manuela'];
+
+const pessoas = [nomes.shift(), ...nomes.slice(2,4)]
+
+console.log(pessoas);
+
+
+//* Limpando preço de objetos
+
+const compras = [
+  {
+    item: 'Banana',
+    preco: 'R$ 4,99'
+  },
+  {
+    item: 'Ovo',
+    preco: 'R$ 2,99'
+  },
+  {
+    item: 'Carne',
+    preco: 'R$ 25,49'
+  },
+  {
+    item: 'Refrigerante',
+    preco: 'R$ 5,35'
+  },
+  {
+    item: 'Quejo',
+    preco: 'R$ 10,60'
+  },
+  {
+    item: 'Arroz',
+    preco: 'R$ 5,50'
+  }
+]
+
+const valorTotal = compras.reduce((acumulador, item) => {
+  const precoLimpo = +item.preco.replace('R$ ', '').replace(',', '.');
+  return acumulador + precoLimpo;
+}, 0)
+
+const valorCerto = valorTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+
+console.log(valorCerto);

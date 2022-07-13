@@ -1,8 +1,8 @@
-//  REST
+//TODO                                                                  REST
 
-//OBS: Só pode existir um parâmetro rest por função e ele necessariamente tem que ser o último.
+//? OBS: Só pode existir um parâmetro rest por função e ele necessariamente tem que ser o último.
 
-// EXEMPLO 1
+//* EXEMPLO 1
 {
 
   function anunciarGanhadores(premio, valor, ...ganhadores) {
@@ -13,7 +13,7 @@
   
 }
 
-//Exemplo 2
+//* EXEMPLO 2
 {
   const adicionar = (...nomes) => console.log(nomes);
   
@@ -25,10 +25,10 @@
 }
 
 
-// SPREAD
-// Usado para clone, transformação em array e espalhamento.
+//TODO                                                                 SPREAD
+//? Usado para clone, transformação em array e espalhamento.
 
-// EXEMPLO 1
+//* EXEMPLO 1
 {
   function anunciarGanhadores(premio, ...ganhadores) {
     ganhadores.forEach(ganhador => console.log(ganhador + ' ganhou um ' + premio));
@@ -37,7 +37,7 @@
   anunciarGanhadores('carro 0km', ...ganhadores);
 }
 
-// EXEMPLO 2
+//* EXEMPLO 2
 {
 const numeros = [1, 2, 3, 4, 5];
 console.log(numeros);
@@ -48,7 +48,7 @@ const combinacao = [...numeros, 'Rafael', 'Dani',...outros,];
 console.log(combinacao);
 }
 
-// EXEMPLO 3
+//* EXEMPLO 3
 {
   const menuzinho = {
   food: {
@@ -64,14 +64,14 @@ const newObject = {...menuzinho.food, ...menuzinho.drink};
 console.log(newObject);
 }
 
-// EXEMPLO 4
+//* EXEMPLO 4
 {
 const nums = [1, 2, 4, 39, 24, 65, 2, 4];
 console.log(Math.max(nums));
 console.log(Math.max(...nums));
 }
 
-// EXEMPLO 5 - Usado como método de clone de objetos e Arrays (Shallow clone)
+//* EXEMPLO 5 - Usado como método de clone de objetos e Arrays (Shallow clone)
 {
 const carro = { cor: 'Verde água', portas: 2, ano: 1993, marca: 'Fiat', modelo: 'Elba'};
 console.log('Carro inicial:',carro);
@@ -90,7 +90,7 @@ const cloneCarro2 = carro;
 console.log('Eles são o mesmo objeto?', carro === cloneCarro2);
 }
 
-// SPREAD + REST
+//TODO                                                                SPREAD + REST
 {
 function add(nomes, ...novosNomes) {
   const novoConjunto = [
