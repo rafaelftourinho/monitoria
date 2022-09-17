@@ -1,0 +1,17 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.btn {
+  background-color: blue;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.preco {
+  font-size: 40px;
+  font-weight: 550;
+}
