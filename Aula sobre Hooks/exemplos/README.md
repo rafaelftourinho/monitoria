@@ -1,4 +1,4 @@
-# **Construir uma página básica para poder fazer o consumo de uma API utilizando Hooks.**
+# **Colocando em prática conhecimentos sobre Hooks.**
 
 # **Header**
 ### 1 - Criar um componente Header que será renderizado em todas as páginas;
@@ -23,15 +23,18 @@
 # **MeowPhrases**
 
 ### 8 - Enquanto há o consumo da API, mostre a frase "Carregando..." na sua tela;
+### 9 - Utilize o endpoint 'https://meowfacts.herokuapp.com/'
 
-### 9 - Essa tela precisa ter um botão para voltar a página anterior e um botão para consumir a API novamente;
+### 10 - Essa tela precisa ter um botão para voltar a página anterior e um botão para consumir a API novamente;
 <br>
 
 # **MeowPhotos**
 
-### 10 - Enquanto há o consumo da API, mostre a frase "Carregando..." na sua tela;
+### 11 - Enquanto há o consumo da API, mostre a frase "Carregando..." na sua tela;
 
-### 11 - Essa tela precisa ter um botão para voltar a página anterior e um botão para consumir a API novamente;
+### 12 - Utilize o endpoint 'https://api.thecatapi.com/v1/images/search';
+
+### 13 - Essa tela precisa ter um botão para voltar a página anterior e um botão para consumir a API novamente.
 <br><br>
 
 # Tecnologias

@@ -1,10 +1,15 @@
-# **Construir uma página básica para poder fazer o consumo de uma API utilizando Hooks.**
+# **Utilizando o useContext**
 
-### 1 - Utilizar o useState para guardar o estado;
-### 2 - Utilizar o useEffect para guardar a resposta da API no localStorage;
-### 3 - Utilizar o useEffect para fazer o consumo da API;
-### 4 - Criar ao menos dois botões que busquem, de forma dinâmica, os produtos listados na API ao serem clicados;
-### 5 - Renderizar na tela o nome do produto, preço e uma imagem relacionado ao mesmo.
+# **useContext**
+### 1 - Crie e configure o ambiente para utilização do contexto;
+<br>
+
+# **Limpar**
+### 2 - Crie um componente chamado Limpar que limpará exclusivamente os dados recebidos da API;
+<br>
+
+# **Produto**
+### 3 - Cria uma página de produto que renderize o nome, preço e foto de algum produto da API;
 <br>
 
 # Tecnologias

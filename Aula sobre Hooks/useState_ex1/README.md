@@ -1,4 +1,4 @@
-## **Construir uma página básica para poder fazer o consumo de uma API utilizando Hooks.**
+# **Construir uma página básica para poder fazer o consumo de uma API utilizando Hooks.**
 
 ### 1 - Utilizar o useState para guardar o estado;
 ### 2 - Fazer uma requisição à API utilizando os dados do useState;
@@ -8,7 +8,7 @@
 ### 5 - Renderizar na tela os produtos com os nomes supracitados;
 <br>
 
-## Tecnologias
+# Tecnologias
 
 Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
 
@@ -17,7 +17,7 @@ Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
 
 <br>
 
-## Instalação e uso
+# Instalação e uso
 
 ```bash
 # Entre no site do Vite e crie o projeto
